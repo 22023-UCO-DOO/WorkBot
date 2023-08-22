@@ -12,15 +12,5 @@ public class Guion {
 	private static char[] extracted(int numeralPalabraSecreta) {
 		return new char[numeralPalabraSecreta];
 	}
-	static boolean hayGuiones(char[] array) {
-		for (char l : array) {
-			if (l == "_".charAt(l)) {
-				return true;
-			}else {
-				return false;
-			}
-			
-		}
-		return false;
-	}
+	
 }
