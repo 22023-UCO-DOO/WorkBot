@@ -4,6 +4,9 @@ import java.util.logging.Logger;
 
 public class Impresora {
 
+	private Impresora() {
+		
+	}
 
 	public static void imprimir(char[] palabraGuiones) {
 		System.out.println(palabraGuiones);
