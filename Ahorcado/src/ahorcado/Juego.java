@@ -11,10 +11,11 @@ public class Juego {
 	}
 
 	static final Scanner lector = new Scanner(System.in);
-	static final char letra = lector.next().charAt(0);
+	static final char LETRA = lector.next().charAt(0);
+	
 	static boolean algunaLetraAcertada = false;
 	static boolean juegoTerminado = false;
-	static final int intentos = 5;
+	static final int INTENTOS = 5;
 
 	public static void juegoComprobacion(int intentos, char letra, char[] palabraGuiones, boolean algunaLetraAcertada) {
 		for (int i = 0; i < palabraSecreta.length(); i++) {
