@@ -31,13 +31,13 @@ public class Palabra {
 	}
 
 	static char[] obtenerGuionesDePalabraSecreta(final String palabra) {
-		final int numeralPalabraSecreta = palabra.length();
-		final char[] palabraGuion = new char[numeralPalabraSecreta];
-		for (int i = 0; i < numeralPalabraSecreta; i++) {
+		final int numeroLetrasPalabraSecreta = palabra.length();
+		final char[] palabraGuion = new char[numeroLetrasPalabraSecreta];
+		for (int i = 0; i < palabraGuion.length; i++) {
 			try {
 				palabraGuion[i] = '_';
 			}catch (StringIndexOutOfBoundsException exception) {
-				System.out.println("Hay un problema con la palabra secreta o el programa no lo capto bien");
+				Impresora.imprimir("Hay un problema con la palabra secreta o el programa no lo capto bien");
 			}
 			
 		}

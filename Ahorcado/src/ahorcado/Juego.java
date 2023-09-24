@@ -18,25 +18,30 @@ public class Juego {
 	static final int INTENTOS = 5;
 
 	public static void juegoComprobacion(int intentos, char letra, char[] palabraGuiones, boolean algunaLetraAcertada) {
+		
 		for (int i = 0; i < palabraSecreta.length(); i++) {
-			Muneco.impresionMuneco(intentos);
+			
 			if (palabraSecreta.charAt(i) == letra) {
 				palabraGuiones[i] = letra;
 				algunaLetraAcertada = true;
+				
 			}
 		}
 
 	}
 
-	public static void validacionLetraPalabra(boolean algunaLetraAcertada, int intentos) {
-		if (algunaLetraAcertada) {
-			return;
+	public static int validacionLetraPalabra(boolean algunaLetraAcertada, int intentos) {
+		if (!algunaLetraAcertada) {
+			return intentos=-1;
+			
 		}
 		Impresora.imprimir("No has acertado ninguna plabra");
-		intentos -= 1;
+		return intentos;
+		
+		
 	}
 
-	public static void validacionJuegoTerminado(int intentos, boolean juegoTerminado, char[] palabraGuiones) {
+	public static boolean validacionJuegoTerminado(int intentos, boolean juegoTerminado, char[] palabraGuiones) {
 		if (intentos == 0) {
 			Impresora.imprimir("Has perdido debido a que has agotado todos los intentos");
 			juegoTerminado = true;
@@ -47,6 +52,7 @@ public class Juego {
 				juegoTerminado = true;
 			}
 		}
+		return juegoTerminado;
 	}
 
 }

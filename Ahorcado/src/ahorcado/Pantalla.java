@@ -17,13 +17,15 @@ public class Pantalla {
 		
 
 		do {
-			Impresora.imprimir(INTENTOS);
-			Impresora.imprimir(palabraGuiones);
+			//Impresora.imprimir(INTENTOS);
 			Impresora.imprimir("Introduce una letra");
+			Impresora.imprimir(palabraGuiones);
+			
 			
 			
 			Juego.juegoComprobacion(INTENTOS, LETRA, palabraGuiones, algunaLetraAcertada);
 			Juego.validacionLetraPalabra(algunaLetraAcertada, INTENTOS);
+			Muneco.impresionMuneco(INTENTOS);
 			Juego.validacionJuegoTerminado(INTENTOS, juegoTerminado, palabraGuiones);
 		} while (!juegoTerminado);
 		
