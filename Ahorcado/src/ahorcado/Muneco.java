@@ -3,15 +3,12 @@ package ahorcado;
 import static ahorcado.Impresora.imprimir;
 
 public class Muneco {
-	
-	static void impresionMuneco(int intentos)
+
+	static void impresionMuneco(final int intentos)
 
 	{
-
-		if (intentos == 5)
-
-		{
-
+		switch (intentos) {
+		case 5 -> {
 			imprimir("    -----   ");
 			imprimir("    |   |   ");
 			imprimir("    |   |   ");
@@ -24,13 +21,8 @@ public class Muneco {
 			imprimir("    |       ");
 			imprimir("    |       ");
 			imprimir("------------");
-
 		}
-
-		if (intentos == 4)
-
-		{
-
+		case 4 -> {
 			imprimir("    -----   ");
 			imprimir("    |   |   ");
 			imprimir("    |   |   ");
@@ -43,13 +35,8 @@ public class Muneco {
 			imprimir("    |       ");
 			imprimir("    |       ");
 			imprimir("------------");
-
 		}
-
-		if (intentos == 3)
-
-		{
-
+		case 3 -> {
 			imprimir("    -----   ");
 			imprimir("    |   |   ");
 			imprimir("    |   |   ");
@@ -62,13 +49,8 @@ public class Muneco {
 			imprimir("    |       ");
 			imprimir("    |       ");
 			imprimir("------------");
-
 		}
-
-		if (intentos == 2)
-
-		{
-
+		case 2 -> {
 			imprimir("    -----   ");
 			imprimir("    |   |   ");
 			imprimir("    |   |   ");
@@ -81,13 +63,8 @@ public class Muneco {
 			imprimir("    |       ");
 			imprimir("    |       ");
 			imprimir("------------");
-
 		}
-
-		if (intentos == 1)
-
-		{
-
+		case 1 -> {
 			imprimir("    -----   ");
 			imprimir("    |   |   ");
 			imprimir("    |   |   ");
@@ -100,25 +77,22 @@ public class Muneco {
 			imprimir("    |       ");
 			imprimir("    |       ");
 			imprimir("------------");
-
 		}
-
-		if (intentos == 0) {
-		
+		case 0 -> {
+			imprimir("    -----   ");
+			imprimir("    |   |   ");
+			imprimir("    |   |   ");
+			imprimir("    |   0   ");
+			imprimir("    |  /|\\ ");
+			imprimir("    |   |   ");
+			imprimir("    |  / \\   ");
+			imprimir("    |       ");
+			imprimir("    |       ");
+			imprimir("    |       ");
+			imprimir("    |       ");
+			imprimir("------------");
 		}
-		imprimir("    -----   ");
-		imprimir("    |   |   ");
-		imprimir("    |   |   ");
-		imprimir("    |   0   ");
-		imprimir("    |  /|\\ ");
-		imprimir("    |   |   ");
-		imprimir("    |  / \\   ");
-		imprimir("    |       ");
-		imprimir("    |       ");
-		imprimir("    |       ");
-		imprimir("    |       ");
-		imprimir("------------");
-
+		default -> throw new IllegalArgumentException("Unexpected value: " + intentos);
+		}
 	}
-
 }

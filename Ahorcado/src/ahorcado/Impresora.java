@@ -1,6 +1,6 @@
 package ahorcado;
 
-import java.util.logging.Logger;
+
 
 public class Impresora {
 
@@ -15,7 +15,7 @@ public class Impresora {
 		System.out.println(mensaje);
 	}
 	public static void imprimir(String mensaje) {
-		Logger.getLogger(mensaje);
+		System.out.println(mensaje);
 	}
 	
 }
