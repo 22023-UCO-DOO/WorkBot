@@ -4,22 +4,22 @@ package co.edu.uco.workbot.data.entity;
 import java.util.GregorianCalendar;
 import java.util.UUID;
 
-public class Calendario {
+public class CalendarioEntity {
 	
 	private UUID id;
 	private GregorianCalendar dia;
 	private GregorianCalendar mes;
 	private GregorianCalendar ano;
 	
-	public Calendario(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
+	public CalendarioEntity(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
 		setId(id);
 		setDia(dia);
 		setMes(mes);
 		setAno(ano);
 	}
 
-	public static final Calendario crear(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
-		return new Calendario(id, dia, mes, ano);
+	public static final CalendarioEntity crear(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
+		return new CalendarioEntity(id, dia, mes, ano);
 	}
 	
 	private final void setId(UUID id) {

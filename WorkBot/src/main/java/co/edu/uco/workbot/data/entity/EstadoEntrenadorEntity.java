@@ -2,17 +2,17 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
-public class EstadoEntrenador {
+public class EstadoEntrenadorEntity {
 
 	private UUID id;
 	private String nombre;
-	public EstadoEntrenador(UUID id, String nombre) {
+	public EstadoEntrenadorEntity(UUID id, String nombre) {
 		setId(id);
 		setNombre(nombre);
 	}
 	
-	public static final EstadoEntrenador crear(UUID id, String nombre) {
-	return new EstadoEntrenador(id, nombre);	
+	public static final EstadoEntrenadorEntity crear(UUID id, String nombre) {
+	return new EstadoEntrenadorEntity(id, nombre);	
 	}
 	public final UUID getId() {
 		return id;

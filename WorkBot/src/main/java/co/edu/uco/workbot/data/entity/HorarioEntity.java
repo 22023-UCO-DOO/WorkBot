@@ -3,13 +3,13 @@ package co.edu.uco.workbot.data.entity;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class Horario {
+public class HorarioEntity {
 	
 	private UUID id;
 	private LocalDateTime horaInicio;
 	private LocalDateTime horaFinalizacion;
 	
-	public Horario(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
+	public HorarioEntity(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
 		
 		setId(id);
 		setHoraInicio(horaInicio);
@@ -17,8 +17,8 @@ public class Horario {
 	
 	}
 
-	public static final Horario crear(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
-		return new Horario(id, horaInicio, horaFinalizacion);
+	public static final HorarioEntity crear(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
+		return new HorarioEntity(id, horaInicio, horaFinalizacion);
 	}
 	
 	public final UUID getId() {

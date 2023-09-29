@@ -2,22 +2,22 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
-public class Rutina {
+public class RutinaEntity {
 
 	private UUID id;
 	private String nombre;
 	private String descripcion;
-	private Ejercicio ejercicio;
+	private EjercicioEntity ejercicioEntity;
 
-	public Rutina(UUID id, String nombre, String descripcion, Ejercicio ejercicio) {
+	public RutinaEntity(UUID id, String nombre, String descripcion, EjercicioEntity ejercicioEntity) {
 		setId(id);
 		setNombre(nombre);
 		setDescripcion(descripcion);
-		setEjercicio(ejercicio);
+		setEjercicio(ejercicioEntity);
 	}
 	
-	public static final Rutina create(UUID id, String nombre, String descripcion, Ejercicio ejercicio) {
-		return new Rutina(id, nombre, descripcion, ejercicio);
+	public static final RutinaEntity create(UUID id, String nombre, String descripcion, EjercicioEntity ejercicioEntity) {
+		return new RutinaEntity(id, nombre, descripcion, ejercicioEntity);
 	}
 
 	public final UUID getId() {
@@ -44,12 +44,12 @@ public class Rutina {
 		this.descripcion = descripcion;
 	}
 
-	public final Ejercicio getEjercicio() {
-		return ejercicio;
+	public final EjercicioEntity getEjercicio() {
+		return ejercicioEntity;
 	}
 
-	private final void setEjercicio(Ejercicio ejercicio) {
-		this.ejercicio = ejercicio;
+	private final void setEjercicio(EjercicioEntity ejercicioEntity) {
+		this.ejercicioEntity = ejercicioEntity;
 	}
 
 }

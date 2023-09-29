@@ -3,19 +3,19 @@ package co.edu.uco.workbot.data.entity;
 import java.util.Timer;
 import java.util.UUID;
 
-public class Duracion {
+public class DuracionEntity {
 	
 	private UUID id;
 	private Timer tiempo;
 	
-	public Duracion(UUID id, Timer tiempo) {
+	public DuracionEntity(UUID id, Timer tiempo) {
 		setId(id);
 		setTiempo(tiempo);
 		
 	}
 	
-	public static final Duracion crear(UUID id, Timer tiempo) {
-		return new Duracion(id, tiempo);
+	public static final DuracionEntity crear(UUID id, Timer tiempo) {
+		return new DuracionEntity(id, tiempo);
 	}
 
 	public final UUID getId() {

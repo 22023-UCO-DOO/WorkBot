@@ -3,19 +3,19 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
-public class Repeticion {
+public class RepeticionEntity {
 	
 	private UUID id;
 	private int cantidad;
 	
-	public Repeticion(UUID id, int cantidad) {
+	public RepeticionEntity(UUID id, int cantidad) {
 		setId(id);
 	setCantidad(cantidad);
 		
 	}
 	
-	public static final Repeticion crear(UUID id, int cantidad) {
-		return new Repeticion(id, cantidad);
+	public static final RepeticionEntity crear(UUID id, int cantidad) {
+		return new RepeticionEntity(id, cantidad);
 	}
 
 	public final UUID getId() {

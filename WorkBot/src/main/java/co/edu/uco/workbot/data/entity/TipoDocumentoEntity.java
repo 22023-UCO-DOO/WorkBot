@@ -4,19 +4,19 @@ import java.util.UUID;
 
 
 
-public final class TipoDocumento {
+public final class TipoDocumentoEntity {
 	private UUID id;
 	private String nombre;
 
 
-	private TipoDocumento(final UUID id, final String nombre) {
+	private TipoDocumentoEntity(final UUID id, final String nombre) {
 		setId(id);
 		setNombre(nombre);
 		
 	}
 
-	public static final TipoDocumento crear(final UUID id, final String nombre) {
-		return new TipoDocumento(id, nombre);
+	public static final TipoDocumentoEntity crear(final UUID id, final String nombre) {
+		return new TipoDocumentoEntity(id, nombre);
 	}
 	
 	private final void setId(final UUID id) {
