@@ -1,4 +1,4 @@
-package co.edu.uco.workbot.data.entity;
+package co.edu.uco.workbot.data.entity.support;
 
 public final class NombreCompletoMiembroEntity {
 	private String nombre;

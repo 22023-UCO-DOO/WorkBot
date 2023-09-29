@@ -2,6 +2,10 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.data.entity.support.CorreoElectronicoMiembroEntity;
+import co.edu.uco.workbot.data.entity.support.NombreCompletoMiembroEntity;
+import co.edu.uco.workbot.data.entity.support.NumeroCelularMiembroEntity;
+
 public class MiembroEntity {
 
 	private UUID id;
