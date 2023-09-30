@@ -1,5 +1,6 @@
 package co.edu.uco.workbot.data.dao.daofactory;
 
+
 import co.edu.uco.workbot.data.dao.CalendarioDAO;
 import co.edu.uco.workbot.data.dao.DuracionDAO;
 import co.edu.uco.workbot.data.dao.EjercicioDAO;
@@ -11,11 +12,29 @@ import co.edu.uco.workbot.data.dao.RepeticionDAO;
 import co.edu.uco.workbot.data.dao.RutinaDAO;
 import co.edu.uco.workbot.data.dao.SerieDAO;
 import co.edu.uco.workbot.data.dao.TipoDocumentoDAO;
+import co.edu.uco.workbot.data.dao.daofactory.concrete.SQLServerDAOFactory;
 
 
 public abstract class DAOFactory {
 	
-	
+	public static final DAOFactory obtenerDAOFactory(final TipoDAOFactory factory) {
+		switch (factory) {
+		case SQLSERVER: {
+			return new SQLServerDAOFactory();
+			
+		}
+		case POSTGRESQL: {
+		
+			throw new RuntimeException("Fatoria no soportada");
+		}
+		case ORACLE: {
+			
+			throw new RuntimeException("Fatoria no soportada");
+		}
+		default:
+			throw new RuntimeException("Fatoria no soportada");
+		}
+	}
 
 	protected abstract void abrirConexion() ;
 	
