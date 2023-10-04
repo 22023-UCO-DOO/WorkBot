@@ -1,0 +1,98 @@
+package co.edu.uco.tiendaonline.data.entity;
+
+public class ClienteEntity {
+	private UUID id;
+	private TipoIdentificacion tipoIdentificacion;
+	private String identificacion;
+	private String primerNombre;
+	private String segundoNombre;
+	private String primerApellido;
+	private String segundoApellido;
+	private String correoElectronico;
+	private boolean correoElectronicoConfirmado;
+	private String numeroTelefonoMovil;
+	private boolean numeroTelefonoMovilConfirmado;
+	
+	private ClienteEntity(UUID id, TipoIdentificacion tipoIdentificacion, String identificacion, String primerNombre,
+			String segundoNombre, String primerApellido, String segundoApellido, String correoElectronico,
+			boolean correoElectronicoConfirmado, String numeroTelefonoMovil, boolean numeroTelefonoMovilConfirmado) {
+		setId(id);
+		setTipoIdentificacion(tipoIdentificacion);
+		setIdentificacion(identificacion);
+		setPrimerNombre(primerNombre);
+		setSegundoNombre(segundoNombre);
+		setPrimerApellido(primerApellido);
+		setSegundoApellido(segundoApellido);
+		setCorreoElectronico(correoElectronico);
+		setCorreoElectronicoConfirmado(correoElectronicoConfirmado);
+		setNumeroTelefonoMovil(numeroTelefonoMovil);
+		setNumeroTelefonoMovilConfirmado(numeroTelefonoMovilConfirmado);
+	}
+	private final void setId(UUID id) {
+		this.id = id;
+	}
+	private final void setTipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
+		this.tipoIdentificacion = tipoIdentificacion;
+	}
+	private final void setIdentificacion(String identificacion) {
+		this.identificacion = identificacion;
+	}
+	private final void setPrimerNombre(String primerNombre) {
+		this.primerNombre = primerNombre;
+	}
+	private final void setSegundoNombre(String segundoNombre) {
+		this.segundoNombre = segundoNombre;
+	}
+	private final void setPrimerApellido(String primerApellido) {
+		this.primerApellido = primerApellido;
+	}
+	private final void setSegundoApellido(String segundoApellido) {
+		this.segundoApellido = segundoApellido;
+	}
+	private final void setCorreoElectronico(String correoElectronico) {
+		this.correoElectronico = correoElectronico;
+	}
+	private final void setCorreoElectronicoConfirmado(boolean correoElectronicoConfirmado) {
+		this.correoElectronicoConfirmado = correoElectronicoConfirmado;
+	}
+	private final void setNumeroTelefonoMovil(String numeroTelefonoMovil) {
+		this.numeroTelefonoMovil = numeroTelefonoMovil;
+	}
+	private final void setNumeroTelefonoMovilConfirmado(boolean numeroTelefonoMovilConfirmado) {
+		this.numeroTelefonoMovilConfirmado = numeroTelefonoMovilConfirmado;
+	}
+	private final UUID getId() {
+		return id;
+	}
+	private final TipoIdentificacion getTipoIdentificacion() {
+		return tipoIdentificacion;
+	}
+	private final String getIdentificacion() {
+		return identificacion;
+	}
+	private final String getPrimerNombre() {
+		return primerNombre;
+	}
+	private final String getSegundoNombre() {
+		return segundoNombre;
+	}
+	private final String getPrimerApellido() {
+		return primerApellido;
+	}
+	private final String getSegundoApellido() {
+		return segundoApellido;
+	}
+	private final String getCorreoElectronico() {
+		return correoElectronico;
+	}
+	private final boolean isCorreoElectronicoConfirmado() {
+		return correoElectronicoConfirmado;
+	}
+	private final String getNumeroTelefonoMovil() {
+		return numeroTelefonoMovil;
+	}
+	private final boolean isNumeroTelefonoMovilConfirmado() {
+		return numeroTelefonoMovilConfirmado;
+	}
+	
+}

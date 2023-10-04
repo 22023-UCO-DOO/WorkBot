@@ -1,0 +1,11 @@
+package co.edu.uco.tiendaonline.data.entity;
+
+public class ClienteEntityData {
+	public String primerNombre;
+	public String segundoNombre;
+	public String primerApellido;
+	public String segundoApellido;
+
+	public ClienteEntityData() {
+	}
+}
