@@ -1,5 +1,7 @@
 package co.edu.uco.workbot.data.entity.support;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+
 public final class CorreoElectronicoMiembroEntity {
 	private String correoElectronico;
 	private boolean confirmacionCorreoElectronico;
@@ -18,7 +20,7 @@ public final class CorreoElectronicoMiembroEntity {
 	}
 
 	private void setCorreoElectronico(String correoElectronico) {
-		this.correoElectronico = correoElectronico;
+		this.correoElectronico = UtilTexto.aplicarTrim(correoElectronico);
 	}
 
 	public boolean isConfirmacionCorreoElectronico() {

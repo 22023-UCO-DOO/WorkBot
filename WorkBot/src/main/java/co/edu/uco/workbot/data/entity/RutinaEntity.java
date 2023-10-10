@@ -2,6 +2,9 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 public class RutinaEntity {
 
 	private UUID id;
@@ -25,7 +28,7 @@ public class RutinaEntity {
 	}
 
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	public final String getNombre() {
@@ -33,7 +36,7 @@ public class RutinaEntity {
 	}
 
 	private final void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilTexto.aplicarTrim(nombre);
 	}
 
 	public final String getDescripcion() {
@@ -41,7 +44,7 @@ public class RutinaEntity {
 	}
 
 	private final void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+		this.descripcion = UtilTexto.aplicarTrim(descripcion);
 	}
 
 	public final EjercicioEntity getEjercicio() {

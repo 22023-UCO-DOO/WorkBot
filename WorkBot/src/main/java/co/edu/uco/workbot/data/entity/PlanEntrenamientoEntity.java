@@ -2,6 +2,8 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 public class PlanEntrenamientoEntity {
 	
 	private UUID id;
@@ -32,7 +34,7 @@ public class PlanEntrenamientoEntity {
 	}
 
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	public final String getNombre() {

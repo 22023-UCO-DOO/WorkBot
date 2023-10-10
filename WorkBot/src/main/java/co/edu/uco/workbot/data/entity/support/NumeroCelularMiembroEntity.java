@@ -1,5 +1,7 @@
 package co.edu.uco.workbot.data.entity.support;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+
 public class NumeroCelularMiembroEntity {
 	private String numeroCelular;
 	private boolean numeroCelularConfirmado;
@@ -18,7 +20,7 @@ public class NumeroCelularMiembroEntity {
 	}
 
 	public void setNumeroCelular(String numeroCelular) {
-		this.numeroCelular = numeroCelular;
+		this.numeroCelular = UtilTexto.aplicarTrim(numeroCelular);
 	}
 
 	public boolean getNumeroCelularConfirmado() {

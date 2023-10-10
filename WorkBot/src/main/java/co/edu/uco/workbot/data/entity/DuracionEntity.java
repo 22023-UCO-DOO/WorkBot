@@ -3,6 +3,8 @@ package co.edu.uco.workbot.data.entity;
 import java.util.Timer;
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 public class DuracionEntity {
 	
 	private UUID id;
@@ -23,7 +25,7 @@ public class DuracionEntity {
 	}
 
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	public final Timer getTiempo() {

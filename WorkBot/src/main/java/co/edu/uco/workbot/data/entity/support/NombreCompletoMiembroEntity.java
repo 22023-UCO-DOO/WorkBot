@@ -1,5 +1,7 @@
 package co.edu.uco.workbot.data.entity.support;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+
 public final class NombreCompletoMiembroEntity {
 	private String nombre;
 	
@@ -19,7 +21,7 @@ public final class NombreCompletoMiembroEntity {
 	}
 
 	private final void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilTexto.aplicarTrim(nombre);
 	}
 
 	public final String getApellido() {
@@ -27,7 +29,7 @@ public final class NombreCompletoMiembroEntity {
 	}
 
 	private final void setApellido(String apellido) {
-		this.apellido = apellido;
+		this.apellido = UtilTexto.aplicarTrim(apellido);
 	}
 	
 	

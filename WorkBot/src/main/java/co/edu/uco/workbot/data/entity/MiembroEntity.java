@@ -2,6 +2,8 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 import co.edu.uco.workbot.data.entity.support.CorreoElectronicoMiembroEntity;
 import co.edu.uco.workbot.data.entity.support.NombreCompletoMiembroEntity;
 import co.edu.uco.workbot.data.entity.support.NumeroCelularMiembroEntity;
@@ -58,11 +60,11 @@ public class MiembroEntity {
 	}
 
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	private final void setIdentificacion(String identificacion) {
-		this.identificacion = identificacion;
+		this.identificacion = UtilTexto.aplicarTrim(identificacion);
 	}
 
 	private final void setTipoDocumentoEntity(TipoDocumentoEntity tipoDocumentoEntity) {

@@ -2,6 +2,9 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 
 
 public final class TipoDocumentoEntity {
@@ -20,11 +23,11 @@ public final class TipoDocumentoEntity {
 	}
 	
 	private final void setId(final UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	private final void setNombre(final String nombre) {
-		this.nombre = nombre;
+		this.nombre =UtilTexto.aplicarTrim(nombre);
 	}
 
 	

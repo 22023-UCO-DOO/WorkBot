@@ -2,6 +2,8 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 public class SerieEntity {
 	
 	private UUID id;
@@ -20,7 +22,7 @@ public class SerieEntity {
 		return id;
 	}
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 	public final DuracionEntity getDuracion() {
 		return duracionEntity;

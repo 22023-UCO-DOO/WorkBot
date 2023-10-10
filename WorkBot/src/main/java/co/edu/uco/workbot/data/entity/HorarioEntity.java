@@ -3,6 +3,8 @@ package co.edu.uco.workbot.data.entity;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
+
 public class HorarioEntity {
 	
 	private UUID id;
@@ -34,7 +36,7 @@ public class HorarioEntity {
 	}
 
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
 	private final void setHoraInicio(LocalDateTime horaInicio) {
