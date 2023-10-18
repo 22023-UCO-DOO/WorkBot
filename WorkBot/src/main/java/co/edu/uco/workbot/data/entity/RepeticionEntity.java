@@ -3,12 +3,14 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilNumero;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class RepeticionEntity {
 	
 	private UUID id;
 	private int cantidad;
+
 	
 	public RepeticionEntity(UUID id, int cantidad) {
 		setId(id);
@@ -32,7 +34,7 @@ public class RepeticionEntity {
 	}
 
 	private final void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+		this.cantidad = (int) UtilNumero.obtenerNumeroDefecto(cantidad);
 	}
 	
 

@@ -2,6 +2,7 @@ package co.edu.uco.workbot.data.entity;
 
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTexto;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class PlanEntrenamientoEntity {
@@ -42,7 +43,7 @@ public class PlanEntrenamientoEntity {
 	}
 
 	private final void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilTexto.aplicarTrim(nombre);
 	}
 
 	public final String getDescripcion() {

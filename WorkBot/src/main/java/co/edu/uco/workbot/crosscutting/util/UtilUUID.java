@@ -14,6 +14,10 @@ public class UtilUUID {
 	private UtilUUID() {
 		super();
 	}
+	
+	public static final UUID asignarUUIDPorDefecto() {
+		return UUID_POR_DEFECTO;
+	}
 
 	public static final UUID obtenerUUIDDefecto(final UUID value) {
 		return UtilObjeto.obtenerValorDefecto(value, UUID_POR_DEFECTO);

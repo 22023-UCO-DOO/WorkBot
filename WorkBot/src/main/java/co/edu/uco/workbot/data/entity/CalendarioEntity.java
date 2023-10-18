@@ -1,58 +1,43 @@
 package co.edu.uco.workbot.data.entity;
 
 
-import java.util.GregorianCalendar;
+import java.util.Date;
+
 import java.util.UUID;
+
+import co.edu.uco.workbot.crosscutting.util.UtilFechaUtil;
+import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class CalendarioEntity {
 	
 	private UUID id;
-	private GregorianCalendar dia;
-	private GregorianCalendar mes;
-	private GregorianCalendar ano;
+private java.util.Date fecha;
 	
-	public CalendarioEntity(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
+	public CalendarioEntity(UUID id, Date fecha) {
 		setId(id);
-		setDia(dia);
-		setMes(mes);
-		setAno(ano);
+		setFecha(fecha);
 	}
 
-	public static final CalendarioEntity crear(UUID id, GregorianCalendar dia, GregorianCalendar mes, GregorianCalendar ano) {
-		return new CalendarioEntity(id, dia, mes, ano);
+	public static final CalendarioEntity crear(UUID id,Date fecha) {
+		return new CalendarioEntity(id,fecha);
 	}
 	
 	private final void setId(UUID id) {
-		this.id = id;
+		this.id =UtilUUID.obtenerUUIDDefecto(id);
 	}
-
-	private final void setDia(GregorianCalendar dia) {
-		this.dia = dia;
-	}
-
-	private final void setMes(GregorianCalendar mes) {
-		this.mes = mes;
-	}
-
-	private final void setAno(GregorianCalendar ano) {
-		this.ano = ano;
-	}
-
+	
 	public final UUID getId() {
 		return id;
 	}
 
-	public final GregorianCalendar getDia() {
-		return dia;
+	public final Date getFecha() {
+		return (fecha);
 	}
 
-	public final GregorianCalendar getMes() {
-		return mes;
+	private final void setFecha(Date fecha) {
+		this.fecha = UtilFechaUtil.obtenerValorDefecto(fecha);
 	}
 
-	public final GregorianCalendar getAno() {
-		return ano;
-	}
 	
 	
 	

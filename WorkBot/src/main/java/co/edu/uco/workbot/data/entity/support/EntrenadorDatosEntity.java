@@ -1,4 +1,7 @@
-package co.edu.uco.workbot.data.entity;
+package co.edu.uco.workbot.data.entity.support;
+
+import co.edu.uco.workbot.data.entity.EstadoEntrenadorEntity;
+import co.edu.uco.workbot.data.entity.HorarioEntity;
 
 public final class EntrenadorDatosEntity {
 	private HorarioEntity agendaInstructor;
