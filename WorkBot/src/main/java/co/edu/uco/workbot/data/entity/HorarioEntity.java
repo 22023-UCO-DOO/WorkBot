@@ -1,17 +1,17 @@
 package co.edu.uco.workbot.data.entity;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
 
+import co.edu.uco.workbot.crosscutting.util.UtilTiempo;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class HorarioEntity {
 	
 	private UUID id;
-	private LocalDateTime horaInicio;
-	private LocalDateTime horaFinalizacion;
+	private int horaInicio;
+	private int horaFinalizacion;
 	
-	public HorarioEntity(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
+	public HorarioEntity(UUID id, int horaInicio, int horaFinalizacion) {
 		
 		setId(id);
 		setHoraInicio(horaInicio);
@@ -19,7 +19,7 @@ public class HorarioEntity {
 	
 	}
 
-	public static final HorarioEntity crear(UUID id, LocalDateTime horaInicio, LocalDateTime horaFinalizacion) {
+	public static final HorarioEntity crear(UUID id, int horaInicio, int horaFinalizacion) {
 		return new HorarioEntity(id, horaInicio, horaFinalizacion);
 	}
 	
@@ -27,11 +27,11 @@ public class HorarioEntity {
 		return id;
 	}
 
-	public final LocalDateTime getHoraInicio() {
+	public final int getHoraInicio() {
 		return horaInicio;
 	}
 
-	public final LocalDateTime getHoraFinalizacion() {
+	public final int getHoraFinalizacion() {
 		return horaFinalizacion;
 	}
 
@@ -39,12 +39,12 @@ public class HorarioEntity {
 		this.id = UtilUUID.obtenerUUIDDefecto(id);
 	}
 
-	private final void setHoraInicio(LocalDateTime horaInicio) {
-		this.horaInicio = horaInicio;
+	private final void setHoraInicio(int horaInicio) {
+		this.horaInicio = UtilTiempo.obtenerValorDefectoHora(horaInicio);
 	}
 
-	private final void setHoraFinalizacion(LocalDateTime horaFinalizacion) {
-		this.horaFinalizacion = horaFinalizacion;
+	private final void setHoraFinalizacion(int horaFinalizacion) {
+		this.horaFinalizacion =UtilTiempo.obtenerValorDefectoHora(horaFinalizacion);
 	}
 	
 	

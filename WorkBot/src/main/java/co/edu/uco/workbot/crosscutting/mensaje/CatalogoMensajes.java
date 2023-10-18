@@ -109,9 +109,30 @@ public final class CatalogoMensajes {
 				"Se ha presentado un problema tratando de obtener el DAO de RutinaSQLServerDAO debido a que la conexiòn actualmente està cerrada, por lo que no hay una conexiòn vàlida disponible..."));
 		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000043, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de obtener el DAO de SerieSQLServerDAO debido a que la conexiòn actualmente està cerrada, por lo que no hay una conexiòn vàlida disponible..."));
-		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000043, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000044, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
 				"Se ha presentado un problema tratando de obtener el DAO de TipoDocumnetoSQLServerDAO debido a que la conexiòn actualmente està cerrada, por lo que no hay una conexiòn vàlida disponible..."));
-		
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000045, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000046, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000047, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000048, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000049, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000050, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000051, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000052, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000053, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000054, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
+		agregarMensaje(Mensaje.crear(CodigoMensaje.M00000055, TipoMensaje.TECNICO, CategoriaMensaje.ERROR,
+				""));
 	}
 
 	public static final Mensaje obtenerMensaje(final CodigoMensaje codigo) {

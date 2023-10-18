@@ -1,5 +1,7 @@
 package co.edu.uco.workbot.crosscutting.util;
 
+
+
 public final class UtilTexto {
 
 	public static final String VACIO = "";
@@ -33,5 +35,13 @@ public final class UtilTexto {
 	
 	public static final boolean igualConTrimIgnoreCase(final String valorUno, final String valorDos) {
 		return aplicarTrim(valorUno).equalsIgnoreCase(aplicarTrim(valorDos));
+	}
+	
+	public static final boolean estaNulo(final String valor) {
+		return UtilObjeto.esNulo(valor);
+	}
+	
+	public static final boolean estaVacio(final String valor) {
+		return !estaNulo(valor) && igualConTrim(valor, VACIO);
 	}
 }

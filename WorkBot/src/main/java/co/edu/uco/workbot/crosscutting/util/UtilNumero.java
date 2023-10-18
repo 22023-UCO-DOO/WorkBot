@@ -41,6 +41,10 @@ public class UtilNumero {
 	public static final <T extends Number> boolean isDifferentThan(T numberOne, T numberTwo) {
 		return isEqualsThan(numberOne, numberTwo);
 	}
+	
+	public static final boolean estaNulo(final int numero) {
+		return UtilObjeto.esNulo(numero);
+	}
 
 	
 }

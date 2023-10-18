@@ -1,6 +1,6 @@
 package co.edu.uco.workbot.data.entity;
 
-
+import co.edu.uco.workbot.data.entity.support.EntrenadorDatosEntity;
 
 public class EntrenadorEntity {
 	
