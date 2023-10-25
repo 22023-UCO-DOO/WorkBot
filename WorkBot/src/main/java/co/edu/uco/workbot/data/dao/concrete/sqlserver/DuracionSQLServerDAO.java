@@ -11,7 +11,7 @@ import java.util.UUID;
 import co.edu.uco.workbot.crosscutting.exception.concrete.DataWorkBotException;
 import co.edu.uco.workbot.crosscutting.mensaje.CatalogoMensajes;
 import co.edu.uco.workbot.crosscutting.mensaje.enumerator.CodigoMensaje;
-import co.edu.uco.workbot.crosscutting.util.UtilFechaUtil;
+import co.edu.uco.workbot.crosscutting.util.UtilFecha;
 import co.edu.uco.workbot.crosscutting.util.UtilObjeto;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 import co.edu.uco.workbot.data.dao.DuracionDAO;
@@ -146,7 +146,7 @@ public class DuracionSQLServerDAO extends SQLDAO implements DuracionDAO{
 			}
 			
 			
-			if (!UtilFechaUtil.estaNulo(entity.getTiempo())) {
+			if (!UtilFecha.estaNulo(entity.getTiempo())) {
 				sentencia.append(operadorCondicional).append(" tiempo=? ");
 				
 				parametros.add(entity.getTiempo());

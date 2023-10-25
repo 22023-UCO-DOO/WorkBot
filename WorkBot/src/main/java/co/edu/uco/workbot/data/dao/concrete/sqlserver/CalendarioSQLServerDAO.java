@@ -13,7 +13,7 @@ import java.util.UUID;
 import co.edu.uco.workbot.crosscutting.exception.concrete.DataWorkBotException;
 import co.edu.uco.workbot.crosscutting.mensaje.CatalogoMensajes;
 import co.edu.uco.workbot.crosscutting.mensaje.enumerator.CodigoMensaje;
-import co.edu.uco.workbot.crosscutting.util.UtilFechaUtil;
+import co.edu.uco.workbot.crosscutting.util.UtilFecha;
 import co.edu.uco.workbot.crosscutting.util.UtilObjeto;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 import co.edu.uco.workbot.data.dao.CalendarioDAO;
@@ -120,7 +120,7 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 			}
 			
 			
-			if (!UtilFechaUtil.estaNulo(entity.getFecha())) {
+			if (!UtilFecha.estaNulo(entity.getFecha())) {
 				sentencia.append(operadorCondicional).append(" fecha=? ");
 				
 				parametros.add(entity.getFecha());

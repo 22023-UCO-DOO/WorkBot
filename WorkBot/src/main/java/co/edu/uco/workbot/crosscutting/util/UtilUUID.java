@@ -10,7 +10,7 @@ public class UtilUUID {
 
 	private static final String UUID_POR_DEFECTO_COMO_TEXTO = "0000000-0000-0000-0000-00000000";
 	private static final UUID UUID_POR_DEFECTO = UUID.fromString(UUID_POR_DEFECTO_COMO_TEXTO);
-
+	public static final String PATTERN_UUID_MAXIMO="^[0-9A-Fa-f]+$";
 	private UtilUUID() {
 		super();
 	}
@@ -56,5 +56,8 @@ public class UtilUUID {
 
 	public static final boolean isDefualtUUID(final UUID value) {
 		return UUID_POR_DEFECTO.equals(value);
+	}
+	public static final boolean esUUIDPorDefecto(final UUID valor) {
+		return valor.equals(UUID_POR_DEFECTO);
 	}
 }

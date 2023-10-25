@@ -1,4 +1,4 @@
-package co.edu.uco.workbot.data.entity;
+package co.edu.uco.workbot.service.domain.calendario;
 
 
 import java.sql.Date;
@@ -8,18 +8,18 @@ import java.util.UUID;
 import co.edu.uco.workbot.crosscutting.util.UtilFecha;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
-public class CalendarioEntity {
+public class CalendarioDomain {
 	
 	private UUID id;
 private Date fecha;
 	
-	public CalendarioEntity(UUID id, Date fecha) {
+	public CalendarioDomain(UUID id, Date fecha) {
 		setId(id);
 		setFecha(fecha);
 	}
 
-	public static final CalendarioEntity crear(UUID id,Date fecha) {
-		return new CalendarioEntity(id,fecha);
+	public static final CalendarioDomain crear(UUID id,Date fecha) {
+		return new CalendarioDomain(id,fecha);
 	}
 	
 	private final void setId(UUID id) {
