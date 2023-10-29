@@ -33,13 +33,6 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrito
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -47,33 +40,51 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Entrenadores del [NOMBRE GIMNASIO]</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">... ¡Para ayudar en cumplir tu meta!</p>
+                    <h1 class="display-4 fw-bolder">Entrenadores</h1>
+                    <p class="lead fw-normal text-white-50 mb-4">... ¡Para ayudar en cumplir tu meta!</p>
+					<select name="barrio" id="barrio">
+						<option value="bar">Barrio</option>
+						<option value="barA">Bar. A</option>
+						<option value="barB">Bar. B</option>
+						<option value="barC">Bar. C</option>
+					</select>
+					<select name="departamento" id="departamento">
+						<option value="dep">Departamento</option>
+						<option value="depA">Dept. A</option>
+						<option value="depB">Dept. B</option>
+						<option value="depC">Dept. C</option>
+					</select> 
+					<select name="gimnasio" id="gimnasio">
+						<option value="gym">Gimnasio</option>
+						<option value="gymA">Gym A</option>
+						<option value="gymB">Gym B</option>
+						<option value="gymC">Gym C</option>
+					</select>
                 </div>
+				<div class="text-center text-white my-3">
+					<input class="btn btn-primary" type="submit" value="Buscar">
+				</div>
             </div>
         </header>
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-					<!-- Copie esta seccion para crear mas productos. -->
+					<!-- Copie esta seccion para crear mas entrenadores. -->
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Imagen-->
                             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Detalles del Producto-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Entrenador #1</h5>
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Más</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Contactar</a></div>
                             </div>
                         </div>
                     </div>
-					<!-- Copie esta seccion para crear mas productos. -->
+					<!-- Copie esta seccion para crear mas entrenadores. -->
                 </div>
             </div>
         </section>
