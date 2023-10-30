@@ -39,8 +39,29 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Eventos</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">... ¡Para participar!</p>
+                    <p class="lead fw-normal text-white-50 mb-4">... ¡Para participar!</p>
+					<select name="barrio" id="barrio">
+						<option value="bar">Barrio</option>
+						<option value="barA">Bar. A</option>
+						<option value="barB">Bar. B</option>
+						<option value="barC">Bar. C</option>
+					</select>
+					<select name="departamento" id="departamento">
+						<option value="dep">Departamento</option>
+						<option value="depA">Dept. A</option>
+						<option value="depB">Dept. B</option>
+						<option value="depC">Dept. C</option>
+					</select> 
+					<select name="departamento" id="departamento">
+						<option value="dep">Gimnasio</option>
+						<option value="depA">Gimnasio #1</option>
+						<option value="depB">Gimnasio #2</option>
+						<option value="depC">Gimnasio #3</option>
+					</select> 
                 </div>
+				<div class="text-center text-white my-3">
+					<input class="btn btn-primary" type="submit" value="Buscar">
+				</div>
             </div>
         </header>
         <div id="layoutSidenav">
@@ -56,7 +77,6 @@
                                             <th>Dia</th>
                                             <th>Horario</th>
                                             <th>Entrenador</th>
-                                            <th>Gimnasio</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -65,7 +85,6 @@
                                             <th>Dia</th>
                                             <th>Horario</th>
                                             <th>Entrenador</th>
-                                            <th>Gimnasio</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -74,21 +93,18 @@
                                             <td>1/1/2023</td>
                                             <td>1:00PM ─ 2:00PM</td>
                                             <td>Entrenador #1</td>
-                                            <td>Gimnasio #1</td>
                                         </tr>
                                         <tr>
                                             <td>Evento #2</td>
                                             <td>1/1/2023</td>
                                             <td>2:00PM ─ 3:00PM</td>
                                             <td>─</td>
-                                            <td>Gimnasio #1</td>
                                         </tr>
                                         <tr>
                                             <td>Evento #3</td>
                                             <td>1/1/2023</td>
                                             <td>3:00PM ─ 4:00PM</td>
                                             <td>Entrenador #1</td>
-                                            <td>Gimnasio #1</td>
                                         </tr>
                                     </tbody>
                                 </table>
