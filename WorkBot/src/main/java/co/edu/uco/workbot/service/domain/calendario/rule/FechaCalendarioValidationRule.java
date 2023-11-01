@@ -28,7 +28,7 @@ public class FechaCalendarioValidationRule implements ValidationRule<Date> {
 
 	private final void validarObligatoriedad(final Date dato) {
 		if(UtilFecha.estaNulo(dato)) {
-			throw ServiceWorkBotException.crear("El nombre del tipo de identificación es un dato obligatorio...");
+			throw ServiceWorkBotException.crear("La fecha del calendario es un dato obligatorio...");
 			
 		}
 	}

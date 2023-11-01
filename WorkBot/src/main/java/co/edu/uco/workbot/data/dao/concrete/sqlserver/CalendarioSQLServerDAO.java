@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-
-
 import co.edu.uco.workbot.crosscutting.exception.concrete.DataWorkBotException;
 import co.edu.uco.workbot.crosscutting.mensaje.CatalogoMensajes;
 import co.edu.uco.workbot.crosscutting.mensaje.enumerator.CodigoMensaje;
@@ -20,11 +18,11 @@ import co.edu.uco.workbot.data.dao.CalendarioDAO;
 import co.edu.uco.workbot.data.dao.base.SQLDAO;
 import co.edu.uco.workbot.data.entity.CalendarioEntity;
 
-public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
+public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO {
 
 	public CalendarioSQLServerDAO(Connection conexion) {
 		super(conexion);
-		
+
 	}
 
 	@Override
@@ -50,21 +48,23 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 
 		return resultado;
 	}
-		private final Optional<CalendarioEntity> ejecutarConsultaPorId(final PreparedStatement sentenciaPreparada) {
-			Optional<CalendarioEntity> resultado = Optional.empty();
-			try (final var resultados = sentenciaPreparada.executeQuery()) {
-				if (resultados.next()) {
-					final var tipoIdentificacionEntity = CalendarioEntity.crear(
-							UtilUUID.obtenerUUIDDeTexto(resultados.getObject("id").toString()),resultados.getDate("fecha"));
-					resultado = Optional.of(tipoIdentificacionEntity);
-				}
-			} catch (SQLException excepcion) {
-				throw DataWorkBotException.crear(excepcion,
-						CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000048),
-						CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000049));
+
+	private final Optional<CalendarioEntity> ejecutarConsultaPorId(final PreparedStatement sentenciaPreparada) {
+		Optional<CalendarioEntity> resultado = Optional.empty();
+		try (final var resultados = sentenciaPreparada.executeQuery()) {
+			if (resultados.next()) {
+				final var tipoIdentificacionEntity = CalendarioEntity.crear(
+						UtilUUID.obtenerUUIDDeTexto(resultados.getObject("id").toString()),
+						resultados.getDate("fecha"));
+				resultado = Optional.of(tipoIdentificacionEntity);
 			}
-			return resultado;
+		} catch (SQLException excepcion) {
+			throw DataWorkBotException.crear(excepcion,
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000048),
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000049));
 		}
+		return resultado;
+	}
 
 	@Override
 	public List<CalendarioEntity> consultar(CalendarioEntity entity) {
@@ -105,6 +105,7 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000056));
 		}
 	}
+
 	private final String formarSentenciaConsulta(final CalendarioEntity entity, final List<Object> parametros) {
 
 		final StringBuilder sentencia = new StringBuilder();
@@ -118,11 +119,10 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 				operadorCondicional = "AND";
 				parametros.add(entity.getId());
 			}
-			
-			
+
 			if (!UtilFecha.estaNulo(entity.getFecha())) {
 				sentencia.append(operadorCondicional).append(" fecha=? ");
-				
+
 				parametros.add(entity.getFecha());
 			}
 		}
@@ -138,7 +138,7 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 			while (resultados.next()) {
 				var tipoIdentificacionEntity = CalendarioEntity.crear(
 						UtilUUID.obtenerUUIDDeTexto(resultados.getObject("id").toString()),
-						
+
 						resultados.getDate("fecha"));
 				listaResultados.add(tipoIdentificacionEntity);
 			}
@@ -155,6 +155,31 @@ public class CalendarioSQLServerDAO extends SQLDAO implements CalendarioDAO{
 
 		return listaResultados;
 	}
-	
+
+	@Override
+	public void crear(CalendarioEntity entity) {
+		final var sentencia = new StringBuilder();
+		sentencia.append("INSERT INTO Calendario (id, fecha ");
+		sentencia.append("VALUES (?,?) ");
+
+		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
+
+			sentenciaPreparada.setObject(1, entity.getId());
+
+			sentenciaPreparada.setDate(2, entity.getFecha());
+
+			sentenciaPreparada.executeUpdate();
+
+		} catch (final SQLException excepcion) {
+			throw DataWorkBotException.crear(excepcion,
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000036),
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000037));
+		} catch (final Exception excepcion) {
+			throw DataWorkBotException.crear(excepcion,
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000038),
+					CatalogoMensajes.obtenerContenidoMensaje(CodigoMensaje.M00000039));
+		}
+		
+	}
 
 }

@@ -6,6 +6,7 @@ public class UtilNumero {
 
 	public static final byte ZERO = 0;
 
+
 	private UtilNumero() {
 		super();
 

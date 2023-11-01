@@ -8,6 +8,7 @@ public final class UtilTexto {
 	public static final String PATTERN_SOLO_LETRAS="[A-Za-záéíóúÁÉÍÓÚ]+$";
 	public static final String PATTERN_SOLO_LETRAS_ESPECIALES="^[0-9A-Za-záéíóúÁÉÍÓÚ ]+$";
 	public static final String PATTERN_SOLO_LETRAS_ESPACIOS="[A-Za-záéíóúÁÉÍÓÚ1-100]+$";
+	public static final String PATTERN_SOLO_NUMEROS="[0-9]+$";
 
 	private UtilTexto() {
 		super();
@@ -65,5 +66,9 @@ public final class UtilTexto {
 	}
 	public static final boolean contieneSoloLetrasCompletas(final String valor) {
 		return aplicarTrim(valor).matches(PATTERN_SOLO_LETRAS_ESPECIALES);
+	}
+	
+	public static final boolean contieneSoloNumeros(final String valor) {
+		return aplicarTrim(valor).matches(PATTERN_SOLO_NUMEROS);
 	}
 }

@@ -7,9 +7,10 @@ import java.util.UUID;
 import co.edu.uco.workbot.data.entity.CalendarioEntity;
 
 
+
 public interface CalendarioDAO {
 
-	
+	void crear(CalendarioEntity entity);
 	
 	Optional<CalendarioEntity> consultarPorId(UUID id);
 	
