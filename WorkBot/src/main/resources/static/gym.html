@@ -60,9 +60,9 @@
                 <!-- Blog entries-->
 
                     <!-- Nested row for non-featured blog posts-->
-                    <div class="row">
+                    <div id="gimnasios" class="row">
+						<!-- 
                         <div class="col-lg-6">
-                            <!-- Blog post-->
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -71,7 +71,6 @@
                                     <a class="btn btn-primary" href="#!">Contactar</a>
                                 </div>
                             </div>
-                            <!-- Blog post-->
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -82,7 +81,6 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <!-- Blog post-->
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -91,7 +89,6 @@
                                     <a class="btn btn-primary" href="#!">Contactar</a>
                                 </div>
                             </div>
-                            <!-- Blog post-->
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
@@ -101,6 +98,7 @@
                                 </div>
                             </div>
                         </div>
+						-->
                     </div>
                     <!-- Pagination
                     <nav aria-label="Pagination">
@@ -126,6 +124,14 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+		<script>
+			var wrapper = document.getElementById("gimnasios");
+			var myHTML = '';
+			for (var i = 0; i < 10; i++) {
+				var gymnasiumNumber = i + 1;
+				myHTML += '<div class="col-lg-6"><div class="card mb-4"><a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a><div class="card-body"><h2 class="card-title h4">Gimnasio #' + gymnasiumNumber + '</h2><p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.<br><br>UBICACION ─ CRA 1 #1-1A</p><a class="btn btn-primary" href="#!">Contactar</a></div></div></div>';
+			}
+			wrapper.innerHTML = myHTML;
+		</script>
     </body>
 </html>
