@@ -129,7 +129,7 @@ public class TipoDocumentoSQLServerDAO extends SQLDAO implements TipoDocumentoDA
 			}
 		}
 
-		sentencia.append(" ORDER BY codigo ASC ");
+		sentencia.append(" ORDER BY nombre ASC ");
 		return sentencia.toString();
 	}
 

@@ -10,17 +10,18 @@ public class HorarioEntity {
 	private UUID id;
 	private int horaInicio;
 	private int horaFinalizacion;
+	private CalendarioEntity calendario;
 	
-	public HorarioEntity(UUID id, int horaInicio, int horaFinalizacion) {
+	public HorarioEntity(UUID id, int horaInicio, int horaFinalizacion,CalendarioEntity calendario) {
 		
 		setId(id);
 		setHoraInicio(horaInicio);
 		setHoraFinalizacion(horaFinalizacion);
-	
+	setCalendario(calendario);
 	}
 
-	public static final HorarioEntity crear(UUID id, int horaInicio, int horaFinalizacion) {
-		return new HorarioEntity(id, horaInicio, horaFinalizacion);
+	public static final HorarioEntity crear(UUID id, int horaInicio, int horaFinalizacion,CalendarioEntity calendario) {
+		return new HorarioEntity(id, horaInicio, horaFinalizacion,calendario);
 	}
 	
 	public final UUID getId() {
@@ -46,6 +47,16 @@ public class HorarioEntity {
 	private final void setHoraFinalizacion(int horaFinalizacion) {
 		this.horaFinalizacion =UtilTiempo.obtenerValorDefectoHora(horaFinalizacion);
 	}
+
+	public final CalendarioEntity getCalendario() {
+		return calendario;
+	}
+
+	private final void setCalendario(CalendarioEntity calendario) {
+		this.calendario = calendario;
+	}
+	
+	
 	
 	
 

@@ -1,17 +1,17 @@
 package co.edu.uco.workbot.data.entity;
 
 
-import java.util.Date;
+import java.sql.Date;
 
 import java.util.UUID;
 
-import co.edu.uco.workbot.crosscutting.util.UtilFechaUtil;
+import co.edu.uco.workbot.crosscutting.util.UtilFecha;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class CalendarioEntity {
 	
 	private UUID id;
-private java.util.Date fecha;
+private Date fecha;
 	
 	public CalendarioEntity(UUID id, Date fecha) {
 		setId(id);
@@ -35,7 +35,7 @@ private java.util.Date fecha;
 	}
 
 	private final void setFecha(Date fecha) {
-		this.fecha = UtilFechaUtil.obtenerValorDefecto(fecha);
+		this.fecha = UtilFecha.obtenerValorDefecto(fecha);
 	}
 
 	

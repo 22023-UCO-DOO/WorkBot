@@ -1,10 +1,11 @@
 package co.edu.uco.workbot.crosscutting.util;
 
-import java.util.Date;
+import java.sql.Date;
+import java.sql.Time;
 
-public class UtilFechaUtil {
+public class UtilFecha {
 
-	private UtilFechaUtil() {
+	private UtilFecha() {
 	}
 
 	protected static final Date FECHA_POR_DEFECTO_DATE_UTIL = new Date(01 / 01 / 2500);
@@ -28,6 +29,9 @@ public class UtilFechaUtil {
 	}
 
 	public static final boolean estaNulo(final Date valor) {
+		return UtilObjeto.esNulo(valor);
+	}
+	public static final boolean estaNulo(final Time valor) {
 		return UtilObjeto.esNulo(valor);
 	}
 	

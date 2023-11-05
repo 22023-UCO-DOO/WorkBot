@@ -23,15 +23,16 @@ public class HorarioSQLServerDAO extends SQLDAO implements HorarioDAO{
 	@Override
 	public void crear(HorarioEntity entity) {
 		final var sentencia = new StringBuilder();
-		sentencia.append("INSERT INTO Duracion (id, tiempo ");
-		sentencia.append("VALUES (?,?) ");
+		sentencia.append("INSERT INTO Horario (id, horainicio, horafin, calendario ");
+		sentencia.append("VALUES (?,?,?,?) ");
 
 		try (final var sentenciaPreparada = getConexion().prepareStatement(sentencia.toString())) {
 
 			sentenciaPreparada.setObject(1, entity.getId());
 
 			sentenciaPreparada.setInt(2, entity.getHoraInicio());
-
+			sentenciaPreparada.setInt(3, entity.getHoraFinalizacion());
+			sentenciaPreparada.setObject(4, entity.getCalendario());
 			sentenciaPreparada.executeUpdate();
 
 		} catch (final SQLException excepcion) {

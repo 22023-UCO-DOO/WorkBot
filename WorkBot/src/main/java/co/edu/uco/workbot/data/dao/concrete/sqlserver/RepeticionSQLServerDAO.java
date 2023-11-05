@@ -31,8 +31,8 @@ public class RepeticionSQLServerDAO extends SQLDAO implements RepeticionDAO{
 	@Override
 	public Optional<RepeticionEntity> consultarPorId(UUID id) {
 		final var sentencia = new StringBuilder();
-		sentencia.append("SELECT id, fecha ");
-		sentencia.append("FROM Calendario ");
+		sentencia.append("SELECT id, cantidad ");
+		sentencia.append("FROM Repeticion ");
 		sentencia.append("WHERE id = ? ");
 
 		Optional<RepeticionEntity> resultado = Optional.empty();

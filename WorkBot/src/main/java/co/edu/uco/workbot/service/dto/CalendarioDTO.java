@@ -1,17 +1,22 @@
 package co.edu.uco.workbot.service.dto;
 
 
-import java.util.Date;
+import java.sql.Date;
 
 import java.util.UUID;
 
-import co.edu.uco.workbot.crosscutting.util.UtilFechaUtil;
+import co.edu.uco.workbot.crosscutting.util.UtilFecha;
 import co.edu.uco.workbot.crosscutting.util.UtilUUID;
 
 public class CalendarioDTO {
 	
 	private UUID id;
-private java.util.Date fecha;
+private Date fecha;
+
+	public CalendarioDTO() {
+		setId(UtilUUID.asignarUUIDPorDefecto());
+		setFecha(UtilFecha.asignarPorDefecto());
+	}
 	
 	public CalendarioDTO(UUID id, Date fecha) {
 		setId(id);
@@ -35,7 +40,7 @@ private java.util.Date fecha;
 	}
 
 	private final CalendarioDTO setFecha(Date fecha) {
-		this.fecha = UtilFechaUtil.obtenerValorDefecto(fecha);return this;
+		this.fecha = UtilFecha.obtenerValorDefecto(fecha);return this;
 	}
 
 	
